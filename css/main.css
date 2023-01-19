@@ -71,6 +71,17 @@ ul {
 	}
 }
 /* End Global Rules */
+.up {
+  position: fixed;
+  right: -40px;
+  bottom: 10px;
+  z-index: 999;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.up.show {
+  right: 10px;
+}
 /* Start Components */
 .main-title {
   position: relative;
@@ -918,6 +929,7 @@ header .main-nav > li > a:hover::before {
   top: 0;
   left: 0;
   height: 100%;
+  transition: width 0.3s linear;
   background-color: var(--main-color, #2196f3);
 }
 /* End Skills */
@@ -1037,8 +1049,8 @@ header .main-nav > li > a:hover::before {
   display: block;
 }
 .events .info .time .unit span:first-child {
-  font-size: 35px;
- padding: 15px;
+  font-size: 30px;
+  padding: 12px;
   color: var(--main-color, #2196f3);
 }
 .events .info .time .unit span:last-child {
@@ -1622,16 +1634,17 @@ header .main-nav > li > a:hover::before {
 }
 .footer .copyright i {
   color: red;
+  animation: pulses 1s infinite;;
 }
 /* End Footer */
 /* Start Animation */
 @keyframes up-and-down {
-   0%, 100% {
+  0%, 100% {
     top: 0;
-   }
-   50% {
+  }
+  50% {
     top: -50px;
-   }
+  }
 }
 @keyframes bouncing {
   0%, 10%, 20%, 50%, 80%, 100% {
@@ -1688,6 +1701,14 @@ header .main-nav > li > a:hover::before {
   }
   50% {
     background-image: url("../images/discount-background2.webp");
+  }
+}
+@keyframes pulses {
+  from {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1);
   }
 }
 /* End Animation */

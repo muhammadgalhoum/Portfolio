@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="description" content="Awesome Portfolio">
-    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="keywords" content="Awesome Portfolio using HTML, CSS, and JavaScript">
     <meta name="author" content="Galhoum">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,8 +18,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <script src="main.js" defer></script>
   </head>
   <body>
+    <img src="images/up.webp" alt="scroll-to-top" class="up">
     <!-- Start Header -->
     <header id="header">
       <div class="container">
@@ -620,25 +622,25 @@
           <div class="skill">
             <h3>HTML <span>90%</span></h3>
             <div class="progress">
-              <span style="width: 90%"></span>
+              <span style="width: 0" data-width="90%"></span>
             </div>
           </div>
           <div class="skill">
             <h3>CSS <span>85%</span></h3>
             <div class="progress">
-              <span style="width: 85%"></span>
+              <span style="width: 0" data-width="85%"></span>
             </div>
           </div>
           <div class="skill">
             <h3>JS <span>80%</span></h3>
             <div class="progress">
-              <span style="width: 80%"></span>
+              <span style="width: 0" data-width="80%"></span>
             </div>
           </div>
           <div class="skill">
             <h3>Python <span>85%</span></h3>
             <div class="progress">
-              <span style="width: 85%"></span>
+              <span style="width: 0" data-width="85%"></span>
             </div>
           </div>
         </div>
@@ -693,19 +695,19 @@
         <div class="info">
           <div class="time">
             <div class="unit">
-              <span>15</span>
+              <span class="days"></span>
               <span>Days</span>
             </div>
             <div class="unit">
-              <span>08</span>
+              <span class="hours"></span>
               <span>Hours</span>
             </div>
             <div class="unit">
-              <span>45</span>
+              <span class="minutes"></span>
               <span>Minutes</span>
             </div>
             <div class="unit">
-              <span>55</span>
+              <span class="seconds"></span>
               <span>Seconds</span>
             </div>
           </div>
@@ -825,22 +827,22 @@
       <div class="container">
         <div class="box">
           <i class="far fa-user fa-2x fa-fw"></i>
-          <span class="number">300</span>
+          <span class="number" data-goal="150">0</span>
           <span class="text">Clients</span>
         </div>
         <div class="box">
           <i class="fas fa-code fa-2x fa-fw"></i>
-          <span class="number">400</span>
+          <span class="number"data-goal="135">0</span>
           <span class="text">Projects</span>
         </div>
         <div class="box">
           <i class="fas fa-globe-asia fa-2x fa-fw"></i>
-          <span class="number">12</span>
+          <span class="number"data-goal="50">0</span>
           <span class="text">Countries</span>
         </div>
         <div class="box">
           <i class="far fa-money-bill-alt fa-2x fa-fw"></i>
-          <span class="number">500K</span>
+          <span class="number"data-goal="300">0</span>
           <span class="text">Money</span>
         </div>
       </div>
@@ -937,7 +939,9 @@
           <img src="images/gallery-06.webp" alt="footer-gallery" />
         </div>
       </div>
-      <p class="copyright">Made With <i class="fa-solid fa-heart"></i> By Galhoum</p>
+      <p class="copyright">
+        Made With <i class="fa-solid fa-heart"></i> By Galhoum © <script>document.write(new Date().getFullYear());</script>
+      </p>
     </footer>
     <!-- End Footer -->
   </body>
